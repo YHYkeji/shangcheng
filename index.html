@@ -1,397 +1,385 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>精选各类黑科技软件资源</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
-/* 全局变量 */
-:root {
-    --primary-color: #FFB6C1; /* 浅珊瑚粉 */
-    --secondary-color: #98FB98; /* 浅绿色 */
-    --background-color: #FFFACD; /* 浅米色 */
-    --text-color: #556B2F; /* 棕褐色 */
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glow-color: rgba(255, 182, 193, 0.3); /* 浅珊瑚粉的半透明 */
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YHY科技站邀请码获取通道</title>
+    <style>
+        :root {
+            --bg-color: hsl(345, 8%, 98%);
+            --container-bg: rgba(255, 255, 255, 0.85);
+            --primary-color: #4CAF50;
+            --title-color: #FF80AB;
+            --text-color: #4a4a4a;
+            --shadow-light: rgba(255, 255, 255, 0.8);
+            --shadow-dark: rgba(206, 206, 206, 0.15);
+            --theme-icon: "☀️";
+            --btn-padding: 1rem 2rem;
+            --avatar-size: 6.5rem;
+            font-size: 16px;
+        }
 
-/* 全局样式 */
-body {
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
-    background: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    position: relative;
-    overflow: hidden;
-}
+        .dark-mode {
+            --bg-color: #2c3e50;
+            --container-bg: rgba(52, 73, 94, 0.9);
+            --primary-color: #66BB6A;
+            --title-color: #F48FB1;
+            --text-color: #ecf0f1;
+            --shadow-light: #405467;
+            --shadow-dark: #1f2b38;
+            --theme-icon: "🌙";
+        }
 
-/* 背景动态光影效果 */
-body::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 60%);
-    animation: background-shift 30s linear infinite;
-    z-index: -1;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+            transition: all 0.3s ease;
+        }
 
-@keyframes background-shift {
-    0% {
-        transform: translate(-20%, -20%) rotate(0deg);
-    }
-    100% {
-        transform: translate(20%, 20%) rotate(360deg);
-    }
-}
+        body {
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-color);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
 
-/* 容器样式 - 玻璃拟态 */
-.container {
-    background: var(--glass-bg);
-    border-radius: 20px;
-    padding: 48px;
-    box-shadow: 0 8px 32px 0 var(--shadow-color), 0 0 40px 0 var(--glow-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-    animation: fade-in 0.6s ease-out;
-}
+        /* 响应式调整 */
+        @media (max-width: 480px) {
+            :root {
+                font-size: 14px;
+                --btn-padding: 0.8rem 1.5rem;
+                --avatar-size: 5.5rem;
+            }
+            .container {
+                padding: 1.5rem;
+                border-radius: 12px;
+            }
+            h1 {
+                font-size: clamp(1.4rem, 6vw, 1.8rem);
+                margin-bottom: 1rem;
+            }
+            .avatar {
+                margin-bottom: 1.5rem;
+            }
+        }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @media (min-width: 481px) and (max-width: 1024px) {
+            :root {
+                --avatar-size: 7rem;
+            }
+            .container {
+                max-width: 80%;
+            }
+        }
 
-/* 标题样式 */
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 48px;
-    margin-bottom: 24px;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px var(--primary-color);
-}
+        .geo-shape {
+            position: absolute;
+            background: rgba(245, 220, 225, 0.06);
+            animation: geoMove 35s infinite linear;
+            opacity: 0.5;
+            will-change: transform;
+            z-index: 0;
+        }
 
-/* 协议提示样式 */
-.protocol {
-    font-size: 18px;
-    margin-bottom: 32px;
-    line-height: 1.6;
-    color: var(--text-color);
-}
+        .hexagon { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+        .triangle { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
 
-/* 步骤列表样式 */
-.steps {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 32px;
-}
+        @keyframes geoMove {
+            0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
+            25% { transform: translate(12vw,8vh) rotate(90deg); }
+            50% { transform: translate(-8vw,12vh) rotate(180deg); }
+            75% { transform: translate(10vw,-6vh) rotate(270deg); }
+        }
 
-.step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    background: var(--glass-bg);
-    border-radius: 12px;
-    padding: 24px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 16px 0 var(--shadow-color);
-    position: relative;
-}
+        .container {
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 5px 5px 12px var(--shadow-dark),
+                       -5px -5px 12px var(--shadow-light);
+            max-width: min(90%, 500px);
+            width: 90%;
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(6px);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.step::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 182, 193, 0.1), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+        h1 {
+            color: var(--title-color);
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.6rem, 5vw, 2rem);
+            text-shadow: 
+                2px 2px 3px rgba(255, 255, 255, 0.5),
+                -1px -1px 2px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: inline-block;
+            animation: titleFloat 4s ease-in-out infinite;
+            width: 100%;
+            order: 1;
+        }
 
-.step:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-}
+        .avatar {
+            width: var(--avatar-size);
+            height: var(--avatar-size);
+            max-width: 90px;
+            max-height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            box-shadow: 4px 4px 8px var(--shadow-dark),
+                       -4px -4px 8px var(--shadow-light);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            order: 2;
+        }
 
-.step:hover::before {
-    opacity: 1;
-}
+        .rotating {
+            animation: avatarRotate 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-.step-number {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-right: 24px;
-    text-shadow: 0 0 5px var(--primary-color);
-}
+        @keyframes avatarRotate {
+            0% { transform: rotate(0deg) scale(1); }
+            30% { transform: rotate(180deg) scale(1.1); }
+            70% { transform: rotate(300deg) scale(0.95); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
 
-.step-description {
-    text-align: left;
-    font-size: 18px;
-    color: var(--text-color);
-}
+        .btn-wrapper {
+            margin: 25px 0;
+            position: relative;
+            order: 3;
+            width: 100%;
+        }
 
-/* 按钮样式 */
-.actions {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+        .btn {
+            background: linear-gradient(145deg, 
+                color-mix(in srgb, var(--primary-color), white 15%),
+                color-mix(in srgb, var(--primary-color), black 8%)
+            );
+            color: white;
+            padding: var(--btn-padding);
+            border: none;
+            border-radius: 12px;
+            font-size: clamp(1rem, 4vw, 1.1rem);
+            cursor: pointer;
+            box-shadow: 
+                4px 4px 8px var(--shadow-dark),
+                -4px -4px 8px var(--shadow-light),
+                0 6px 20px rgba(76, 175, 80, 0.15);
+            transition: 
+                transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 120px;
+            min-height: 44px;
+            -webkit-tap-highlight-color: transparent;
+            display: block;
+            margin: 0 auto;
+        }
 
-.btn {
-    padding: 20px 40px;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
-    position: relative;
-    overflow: hidden;
-}
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                6px 6px 12px var(--shadow-dark),
+                -6px -6px 12px var(--shadow-light),
+                0 8px 25px rgba(76, 175, 80, 0.2);
+        }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(45deg);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 
+                2px 2px 4px var(--shadow-dark),
+                -2px -2px 4px var(--shadow-light);
+        }
 
-.btn:hover::before {
-    opacity: 1;
-}
+        .wave-loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            display: none;
+        }
 
-.btn-primary {
-    background: var(--primary-color);
-    color: var(--background-color);
-    box-shadow: 0 0 20px 0 var(--primary-color);
-}
+        .wave-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            border: 2px solid var(--primary-color);
+            animation: wavePulse 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            opacity: 0;
+        }
 
-.btn-primary:hover {
-    background: #FF69B4; /* 深珊瑚粉 */
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px 0 var(--primary-color);
-}
+        @keyframes wavePulse {
+            0% { transform: scale(0); opacity: 0.6; }
+            100% { transform: scale(2); opacity: 0; }
+        }
 
-.btn-secondary {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    box-shadow: 0 0 10px 0 var(--primary-color);
-}
+        .tip {
+            color: var(--text-color);
+            font-size: clamp(0.75rem, 3vw, 0.85rem);
+            line-height: 1.4;
+            margin: 15px 0;
+            min-height: 50px;
+            padding: 0.8rem;
+            order: 4;
+            width: 100%;
+        }
 
-.btn-secondary:hover {
-    background: rgba(255, 182, 193, 0.1);
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px 0 var(--primary-color);
-}
+        .theme-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--container-bg);
+            box-shadow: 2px 2px 4px var(--shadow-dark),
+                       -2px -2px 4px var(--shadow-light);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
 
-/* 自定义提示弹窗样式 */
-.custom-alert {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: var(--text-color);
-    padding: 24px 48px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px 0 var(--shadow-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 1000;
-    animation: slide-down 0.3s ease-out;
-    white-space: pre-line; /* Ensure new lines are respected in the alert message */
-    max-width: 90%; /* Ensure it doesn't exceed screen width on small devices */
-    text-align: center; /* Center text inside the alert */
-}
+        .theme-toggle::before {
+            content: var(--theme-icon);
+            font-size: 1.1em;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+        }
 
-/* 加载弹窗样式 */
-.loading-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1001;
-}
+        .biankuang {
+            font-size: clamp(0.7rem, 3vw, 0.8rem);
+            border: 1px solid pink;
+            border-radius: 10px;
+            padding: 10px;
+        }
 
-.loading-message {
-    background: var(--glass-bg);
-    border-radius: 12px;
-    padding: 32px;
-    box-shadow: 0 8px 32px 0 var(--shadow-color), 0 0 40px 0 var(--glow-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    color: var(--text-color);
-    font-size: 24px;
-}
-
-@keyframes slide-down {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -20px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .container {
-        padding: 24px;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    .protocol {
-        font-size: 16px;
-    }
-
-    .step {
-        padding: 16px;
-    }
-
-    .step-number {
-        font-size: 24px;
-    }
-
-    .step-description {
-        font-size: 16px;
-    }
-
-    .btn {
-        padding: 16px 32px;
-        font-size: 16px;
-    }
-
-    .loading-message {
-        font-size: 20px;
-    }
-}
-</style>
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0) rotate(-0.5deg); }
+            50% { transform: translateY(-3px) rotate(0.5deg); }
+        }
+    </style>
 </head>
 <body>
-<div id="content" class="container">
-    <h1>YHY科技站邀请码获取通道</h1>
-    <p class="protocol">检测到访问环境限制，请根据以下操作在浏览器打开</p>
-    <ul class="steps">
-        <li class="step">
-            <span class="step-number">1</span>
-            <span class="step-description">点击右上角 <strong style="color: var(--primary-color)">•••</strong> 系统菜单</span>
-        </li>
-        <li class="step">
-            <span class="step-number">2</span>
-            <span class="step-description">选择 <strong style="color: var(--primary-color)">[在浏览器打开]</strong> 选项</span>
-        </li>
-        <li class="step">
-            <span class="step-number">3</span>
-            <span class="step-description">完成浏览器打开并进入核心资源区</span>
-        </li>
-    </ul>
-    <div class="actions">
-        <button class="btn btn-secondary" onclick="copyUrl()">或者点此复制网址，到浏览器打开</button>
+    <div class="geo-shape hexagon" style="width:70px; height:70px; top:10%; left:8%"></div>
+    <div class="geo-shape triangle" style="width:50px; height:50px; bottom:15%; right:8%"></div>
+
+    <div class="wave-loader" id="loader">
+        <div class="wave-circle" style="animation-delay: 0s"></div>
+        <div class="wave-circle" style="animation-delay: 0.4s"></div>
     </div>
-</div>
 
-<!-- 加载弹窗 -->
-<div id="loadingModal" class="loading-modal" style="display: none;">
-    <div class="loading-message">正在加载网页，请稍后</div>
-</div>
+    <div class="theme-toggle" onclick="toggleTheme()"></div>
+    
+    <div class="container">
+        <h1>YHY科技站邀请码获取通道</h1>
+        <img src="https://d.kstore.dev/download/7336/tv/logo.gif" 
+             class="avatar" 
+             id="avatar">
+        <div class="btn-wrapper">
+            <button class="btn" onclick="handleClick()" id="btn">立即前往</button>
+        </div>
+        <p class="tip biankuang" id="tip">❗️因为每次打开都是新网址<br><br>所以要麻烦宝子重新登录哦～<br><br>如果不想每次都重新登录请收藏访问的新链接等打不开的时候再重新生成一个即可。</p>
+    </div>
 
-<script>
-    const targetUrl = 'https://r.hengaini9528.makeup/?mod=buy&tid=1';
-    const ua = navigator.userAgent.toLowerCase();
-    const isWechat = ua.includes('micromessenger');
-    const isQQ = /qq\//.test(ua) || /mqqbrowser/.test(ua);
-
-    // 逻辑分支：微信或QQ访问显示HTML，其他直接跳转
-    if (!isWechat && !isQQ) {
-        showLoadingModal();
-        window.location.href = targetUrl;
-    }
-
-    function showLoadingModal() {
-        document.getElementById('loadingModal').style.display = 'flex';
-    }
-
-    async function copyUrl() {
-        try {
-            await navigator.clipboard.writeText(targetUrl);
-            showCustomAlert('✅ 链接已复制到剪贴板\n可粘贴到浏览器打开');
-            
-            // 微信环境特殊处理
-            if(isWechat) {
-                setTimeout(() => {
-                    showCustomAlert('请前往浏览器粘贴地址访问');
-                }, 2000);
-            }
-        } catch (err) {
-            // 兼容旧版浏览器
-            const textarea = document.createElement('textarea');
-            textarea.value = targetUrl;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            showCustomAlert('✅ 链接已复制到剪贴板');
+    <script>
+        // 视口高度适配
+        function handleViewport() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
-    }
+        window.addEventListener('resize', handleViewport);
+        handleViewport();
 
-    function showCustomAlert(message) {
-        const alertBox = document.createElement('div');
-        alertBox.className = 'custom-alert';
-        alertBox.innerHTML = message;
-        document.body.appendChild(alertBox);
-        
-        setTimeout(() => {
-            alertBox.style.opacity = '0';
+        // 系统主题适配
+        const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+        const applyTheme = (isDark) => {
+            document.body.classList.toggle('dark-mode', isDark);
+        };
+        systemDarkMode.addListener((e) => applyTheme(e.matches));
+        applyTheme(systemDarkMode.matches);
+
+        // 点击处理
+        let isProcessing = false;
+        function handleClick() {
+            if(isProcessing) return;
+            isProcessing = true;
+            
+            const loader = document.getElementById('loader');
+            const avatar = document.getElementById('avatar');
+            const tip = document.getElementById('tip');
+            const btn = document.getElementById('btn');
+
+            const ripple = document.createElement('div');
+            ripple.style.cssText = `
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            const rect = btn.getBoundingClientRect();
+            ripple.style.left = `${event.clientX - rect.left}px`;
+            ripple.style.top = `${event.clientY - rect.top}px`;
+            btn.appendChild(ripple);
+
+            loader.style.display = 'block';
+            avatar.classList.add('rotating');
+            tip.textContent = '正在随机新路线...';
+
             setTimeout(() => {
-                alertBox.remove();
-            }, 3000);
-        }, 2500);
-    }
-</script>
+                window.open(`http://${generateRandomString()}.${targetDomain}`, '_blank');
+                loader.style.display = 'none';
+                avatar.classList.remove('rotating');
+                tip.textContent = '✨因为每次打开都是新网址，\n所以宝宝需要重新登录哦～';
+                isProcessing = false;
+                ripple.remove();
+            }, 1200);
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            systemDarkMode.removeListener(applyTheme);
+        }
+
+        function generateRandomString() {
+            return Math.random().toString(36).substr(2,5).toUpperCase();
+        }
+
+        const targetDomain = 'https://r.hengaini9528.makeup/?mod=buy&tid=1'; // 这里可以更改为你想要的目标域名
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.querySelectorAll('.geo-shape').forEach(shape => {
+            shape.style.animationDelay = `${Math.random() * 5}s`;
+        });
+    </script>
+<script src="//cdn.suyanw.cn/suyan.js"></script>
 </body>
 </html>
-
 
 
