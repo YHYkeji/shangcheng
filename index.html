@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YHY科技邀请码获取通道</title>
+    <title>不迷路的小宝宝</title>
     <style>
-        /* 之前的CSS样式保持不变 */
         :root {
-            --bg-color: #0a0c27;
-            --container-bg: rgba(35, 50, 75, 0.8);
-            --primary-color: #4fd1c5;
-            --title-color: #ff7e5f;
-            --text-color: #bfc9ca;
-            --shadow-light: rgba(255, 255, 255, 0.1);
-            --shadow-dark: rgba(0, 0, 0, 0.3);
+            --bg-color: hsl(345, 8%, 98%);
+            --container-bg: rgba(255, 255, 255, 0.85);
+            --primary-color: #4CAF50;
+            --title-color: #FF80AB;
+            --text-color: #4a4a4a;
+            --shadow-light: rgba(255, 255, 255, 0.8);
+            --shadow-dark: rgba(206, 206, 206, 0.15);
             --theme-icon: "☀️";
             --btn-padding: 1rem 2rem;
             --avatar-size: 6.5rem;
@@ -21,13 +20,13 @@
         }
 
         .dark-mode {
-            --bg-color: #0a0c27;
-            --container-bg: rgba(35, 50, 75, 0.8);
-            --primary-color: #4fd1c5;
-            --title-color: #ff7e5f;
-            --text-color: #bfc9ca;
-            --shadow-light: rgba(255, 255, 255, 0.1);
-            --shadow-dark: rgba(0, 0, 0, 0.3);
+            --bg-color: #2c3e50;
+            --container-bg: rgba(52, 73, 94, 0.9);
+            --primary-color: #66BB6A;
+            --title-color: #F48FB1;
+            --text-color: #ecf0f1;
+            --shadow-light: #405467;
+            --shadow-dark: #1f2b38;
             --theme-icon: "🌙";
         }
 
@@ -35,12 +34,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto Mono', monospace;
+            font-family: 'Microsoft YaHei', sans-serif;
             transition: all 0.3s ease;
         }
 
         body {
             min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,6 +50,7 @@
             overflow: hidden;
         }
 
+        /* 响应式调整 */
         @media (max-width: 480px) {
             :root {
                 font-size: 14px;
@@ -59,7 +60,6 @@
             .container {
                 padding: 1.5rem;
                 border-radius: 12px;
-                width: 90%;
             }
             h1 {
                 font-size: clamp(1.4rem, 6vw, 1.8rem);
@@ -67,12 +67,6 @@
             }
             .avatar {
                 margin-bottom: 1.5rem;
-            }
-            .tip {
-                font-size: clamp(0.7rem, 3vw, 0.8rem);
-            }
-            .btn {
-                font-size: clamp(0.8rem, 3vw, 1rem);
             }
         }
 
@@ -82,20 +76,12 @@
             }
             .container {
                 max-width: 80%;
-                width: 80%;
-            }
-        }
-
-        @media (min-width: 1025px) {
-            .container {
-                max-width: 600px;
-                width: 600px;
             }
         }
 
         .geo-shape {
             position: absolute;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(245, 220, 225, 0.06);
             animation: geoMove 35s infinite linear;
             opacity: 0.5;
             will-change: transform;
@@ -118,6 +104,8 @@
             border-radius: 16px;
             box-shadow: 5px 5px 12px var(--shadow-dark),
                        -5px -5px 12px var(--shadow-light);
+            max-width: min(90%, 500px);
+            width: 90%;
             text-align: center;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.25);
@@ -133,8 +121,8 @@
             margin-bottom: 1.5rem;
             font-size: clamp(1.6rem, 5vw, 2rem);
             text-shadow: 
-                2px 2px 3px rgba(255, 255, 255, 0.1),
-                -1px -1px 2px rgba(0, 0, 0, 0.3);
+                2px 2px 3px rgba(255, 255, 255, 0.5),
+                -1px -1px 2px rgba(0, 0, 0, 0.1);
             position: relative;
             display: inline-block;
             animation: titleFloat 4s ease-in-out infinite;
@@ -276,7 +264,7 @@
 
         .biankuang {
             font-size: clamp(0.7rem, 3vw, 0.8rem);
-            border: 1px solid #ff7e5f;
+            border: 1px solid pink;
             border-radius: 10px;
             padding: 10px;
         }
@@ -285,64 +273,9 @@
             0%, 100% { transform: translateY(0) rotate(-0.5deg); }
             50% { transform: translateY(-3px) rotate(0.5deg); }
         }
-
-        /* 添加新的科技风格元素 */
-        .glow-effect {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(79, 209, 197, 0.2), transparent);
-            pointer-events: none;
-            mix-blend-mode: overlay;
-            z-index: -1;
-        }
-
-        .container:before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(
-                45deg,
-                rgba(255, 255, 255, 0.05),
-                rgba(255, 255, 255, 0.05) 1px,
-                transparent 1px,
-                transparent 25px
-            ), 
-            repeating-linear-gradient(
-                -45deg,
-                rgba(255, 255, 255, 0.05),
-                rgba(255, 255, 255, 0.05) 1px,
-                transparent 1px,
-                transparent 25px
-            );
-            background-size: 50px 50px;
-            background-position: 0 0, 25px 25px;
-            animation: animateBackground 10s linear infinite;
-        }
-
-        @keyframes animateBackground {
-            to {
-                background-position: 50px 50px, 75px 75px;
-            }
-        }
-
-        .code-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMjUgMjUiIHByZXNlcnZlQXNwb249Im5vbmUiIGFsaXBoYS12aWV3PSJub25lIiBzdHlsZT0idG9wOiAwOyBsZWZ0OiA7IiBjbGFzcz0ibGluayI+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAuNSIgeTE9IjAuNSIgeDI9IjEuNSIgeTI9IjEuNSI+PHN0b3AtY29sb3Igc3RvcC1jb2xvcj0iIzc3ODk5OSIgb2Zmc2V0PSIwJSIgLz48c3RvcC1jb2xvciBzdG9wLWNvbG9yPSIjNGZhOWNjIiBvZmZzZXQ9IjEwMCUiIC8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz48L3N2Zz4=);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -2;
-        }
     </style>
 </head>
 <body>
-    <div class="code-background"></div>
-    <div class="glow-effect"></div>
     <div class="geo-shape hexagon" style="width:70px; height:70px; top:10%; left:8%"></div>
     <div class="geo-shape triangle" style="width:50px; height:50px; bottom:15%; right:8%"></div>
 
@@ -354,14 +287,14 @@
     <div class="theme-toggle" onclick="toggleTheme()"></div>
     
     <div class="container">
-        <h1>邀请码获取</h1>
-        <img src="https://via.placeholder.com/150"
+        <h1>素颜引导页</h1>
+        <img src="https://api.suyanw.cn/api/qq.php/?qq=836721503" 
              class="avatar" 
              id="avatar">
         <div class="btn-wrapper">
-            <button class="btn" onclick="handleClick()" id="btn">点此立即前往</button>
+            <button class="btn" onclick="handleClick()" id="btn">立即前往</button>
         </div>
-        <p class="tip biankuang" id="tip">感谢宝子们的大力支持❗️因为运维需要成本，YHY每日也都会更新整理最少15篇科技站资源，而这也需要耗费大量时间～哭唧唧……<br><br>所以邀请码不再免费对外开放，需要小小的支持！介意勿扰，万分抱歉！</p>
+        <p class="tip biankuang" id="tip">❗️因为每次打开都是新网址<br><br>所以要麻烦宝子重新登录哦～<br><br>如果不想每次都重新登录请收藏访问的新链接等打不开的时候再重新生成一个即可。</p>
     </div>
 
     <script>
@@ -410,14 +343,13 @@
 
             loader.style.display = 'block';
             avatar.classList.add('rotating');
-            tip.textContent = '正在快速载入...';
+            tip.textContent = '正在随机新路线...';
 
             setTimeout(() => {
-                // 修改这里以测试不同的域名
-                window.open(`http://test.hengaini9528.makeup/?mod=buy&tid=1`, '_blank');
+                window.open(`http://${generateRandomString()}.hengaini9528.makeup/?mod=buy&tid=1`, '_blank'); // 更改顶级域名为 example.com
                 loader.style.display = 'none';
                 avatar.classList.remove('rotating');
-                tip.textContent = '✨感谢大家的参与，购买完邀请码后，请直接返回官网点击注册，输入邀请码后，即可开始注册～';
+                tip.textContent = '✨因为每次打开都是新网址，\n所以宝宝需要重新登录哦～';
                 isProcessing = false;
                 ripple.remove();
             }, 1200);
@@ -429,7 +361,7 @@
         }
 
         function generateRandomString() {
-            return Math.random().toString(36).substr(2,5).toUpperCase();
+            return Math.random().toString(36).substr(2,8).toUpperCase(); // 增加到8个字符
         }
 
         const style = document.createElement('style');
@@ -444,7 +376,9 @@
             shape.style.animationDelay = `${Math.random() * 5}s`;
         });
     </script>
+<script src="//cdn.suyanw.cn/suyan.js"></script>
 </body>
 </html>
+
 
 
