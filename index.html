@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>不迷路的小宝宝</title>
+    <title>YHY科技站邀请码</title>
     <style>
         :root {
-            --bg-color: hsl(345, 8%, 98%);
-            --container-bg: rgba(255, 255, 255, 0.85);
-            --primary-color: #4CAF50;
-            --title-color: #FF80AB;
-            --text-color: #4a4a4a;
-            --shadow-light: rgba(255, 255, 255, 0.8);
-            --shadow-dark: rgba(206, 206, 206, 0.15);
+            --bg-color: #121212;
+            --container-bg: rgba(255, 255, 255, 0.05);
+            --primary-color: #00bcd4;
+            --title-color: #ffeb3b;
+            --text-color: #ffffff;
+            --shadow-light: rgba(255, 255, 255, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.5);
             --theme-icon: "☀️";
             --btn-padding: 1rem 2rem;
             --avatar-size: 6.5rem;
-            font-size: 16px;
+            font-family: 'Roboto Mono', monospace;
+            transition: all 0.3s ease;
         }
 
         .dark-mode {
-            --bg-color: #2c3e50;
-            --container-bg: rgba(52, 73, 94, 0.9);
-            --primary-color: #66BB6A;
-            --title-color: #F48FB1;
-            --text-color: #ecf0f1;
-            --shadow-light: #405467;
-            --shadow-dark: #1f2b38;
+            --bg-color: #121212;
+            --container-bg: rgba(255, 255, 255, 0.05);
+            --primary-color: #00bcd4;
+            --title-color: #ffeb3b;
+            --text-color: #ffffff;
+            --shadow-light: rgba(255, 255, 255, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.5);
             --theme-icon: "🌙";
         }
 
@@ -34,17 +35,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Microsoft YaHei', sans-serif;
             transition: all 0.3s ease;
         }
 
         body {
             min-height: 100vh;
-            min-height: calc(var(--vh, 1vh) * 100);
             display: flex;
             justify-content: center;
             align-items: center;
             background: var(--bg-color);
+            color: var(--text-color);
             padding: 20px;
             position: relative;
             overflow: hidden;
@@ -81,7 +81,7 @@
 
         .geo-shape {
             position: absolute;
-            background: rgba(245, 220, 225, 0.06);
+            background: rgba(255, 255, 255, 0.03);
             animation: geoMove 35s infinite linear;
             opacity: 0.5;
             will-change: transform;
@@ -108,7 +108,6 @@
             width: 90%;
             text-align: center;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(6px);
             z-index: 2;
             display: flex;
@@ -121,7 +120,7 @@
             margin-bottom: 1.5rem;
             font-size: clamp(1.6rem, 5vw, 2rem);
             text-shadow: 
-                2px 2px 3px rgba(255, 255, 255, 0.5),
+                2px 2px 3px rgba(255, 255, 255, 0.1),
                 -1px -1px 2px rgba(0, 0, 0, 0.1);
             position: relative;
             display: inline-block;
@@ -133,13 +132,11 @@
         .avatar {
             width: var(--avatar-size);
             height: var(--avatar-size);
-            max-width: 90px;
-            max-height: 90px;
             border-radius: 50%;
             margin: 0 auto 2rem;
             box-shadow: 4px 4px 8px var(--shadow-dark),
                        -4px -4px 8px var(--shadow-light);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             order: 2;
         }
@@ -164,8 +161,8 @@
 
         .btn {
             background: linear-gradient(145deg, 
-                color-mix(in srgb, var(--primary-color), white 15%),
-                color-mix(in srgb, var(--primary-color), black 8%)
+                color-mix(in srgb, var(--primary-color), black 15%),
+                color-mix(in srgb, var(--primary-color), black 85%)
             );
             color: white;
             padding: var(--btn-padding);
@@ -176,7 +173,7 @@
             box-shadow: 
                 4px 4px 8px var(--shadow-dark),
                 -4px -4px 8px var(--shadow-light),
-                0 6px 20px rgba(76, 175, 80, 0.15);
+                0 6px 20px rgba(0, 188, 212, 0.2);
             transition: 
                 transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
                 box-shadow 0.3s ease;
@@ -194,7 +191,7 @@
             box-shadow: 
                 6px 6px 12px var(--shadow-dark),
                 -6px -6px 12px var(--shadow-light),
-                0 8px 25px rgba(76, 175, 80, 0.2);
+                0 8px 25px rgba(0, 188, 212, 0.3);
         }
 
         .btn:active {
@@ -264,7 +261,7 @@
 
         .biankuang {
             font-size: clamp(0.7rem, 3vw, 0.8rem);
-            border: 1px solid pink;
+            border: 1px solid #ffeb3b;
             border-radius: 10px;
             padding: 10px;
         }
@@ -273,9 +270,38 @@
             0%, 100% { transform: translateY(0) rotate(-0.5deg); }
             50% { transform: translateY(-3px) rotate(0.5deg); }
         }
+
+        /* 添加背景光效 */
+        .glow-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 188, 212, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* 按钮波纹效果 */
+        .ripple-effect {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            to { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+        }
     </style>
 </head>
 <body>
+    <div class="glow-background"></div>
     <div class="geo-shape hexagon" style="width:70px; height:70px; top:10%; left:8%"></div>
     <div class="geo-shape triangle" style="width:50px; height:50px; bottom:15%; right:8%"></div>
 
@@ -287,12 +313,12 @@
     <div class="theme-toggle" onclick="toggleTheme()"></div>
     
     <div class="container">
-        <h1>素颜引导页</h1>
+        <h1>YHY科技站丨邀请码获取通道</h1>
         <img src="https://api.suyanw.cn/api/qq.php/?qq=836721503" 
              class="avatar" 
              id="avatar">
         <div class="btn-wrapper">
-            <button class="btn" onclick="handleClick()" id="btn">立即前往</button>
+            <button class="btn" onclick="handleClick()" id="btn">点此立即获取</button>
         </div>
         <p class="tip biankuang" id="tip">❗️因为每次打开都是新网址<br><br>所以要麻烦宝子重新登录哦～<br><br>如果不想每次都重新登录请收藏访问的新链接等打不开的时候再重新生成一个即可。</p>
     </div>
@@ -326,16 +352,7 @@
             const btn = document.getElementById('btn');
 
             const ripple = document.createElement('div');
-            ripple.style.cssText = `
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                background: rgba(255, 255, 255, 0.3);
-                border-radius: 50%;
-                transform: translate(-50%, -50%) scale(0);
-                animation: ripple 0.6s linear;
-                pointer-events: none;
-            `;
+            ripple.className = 'ripple-effect';
             const rect = btn.getBoundingClientRect();
             ripple.style.left = `${event.clientX - rect.left}px`;
             ripple.style.top = `${event.clientY - rect.top}px`;
@@ -343,13 +360,13 @@
 
             loader.style.display = 'block';
             avatar.classList.add('rotating');
-            tip.textContent = '正在随机新路线...';
+            tip.textContent = '正在快速载入......';
 
             setTimeout(() => {
                 window.open(`http://${generateRandomString()}.hengaini9528.makeup/?mod=buy&tid=1`, '_blank'); // 更改顶级域名为 example.com
                 loader.style.display = 'none';
                 avatar.classList.remove('rotating');
-                tip.textContent = '✨因为每次打开都是新网址，\n所以宝宝需要重新登录哦～';
+                tip.textContent = '✨感谢大家的参与，购买完邀请码后，请直接返回官网点击注册，输入邀请码后，即可开始注册～';
                 isProcessing = false;
                 ripple.remove();
             }, 1200);
@@ -363,14 +380,6 @@
         function generateRandomString() {
             return Math.random().toString(36).substr(2,8).toUpperCase(); // 增加到8个字符
         }
-
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to { transform: translate(-50%, -50%) scale(2); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
 
         document.querySelectorAll('.geo-shape').forEach(shape => {
             shape.style.animationDelay = `${Math.random() * 5}s`;
